@@ -33,4 +33,4 @@ while player == False:
         print("That's not a valid play. Check your spelling!")
     #this line can be set to True for a single play or False for unlimted plays
     player = False
-    computer = options[randint(0,2)]
+    computer = options[randint(0,4)]
