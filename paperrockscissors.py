@@ -1,10 +1,10 @@
 from random import randint
 
 
-options = ["rock", "paper", "scissors"]
+options = ["rock", "paper", "scissors", 'piedra', 'papel', 'tijera']
 
 
-computer = options[randint(0,2)]
+computer = options[randint(0,4)]
 
 #this line must be set to False
 player = False
@@ -14,18 +14,18 @@ while player == False:
     player = input("rock, paper, scissors? ")
     if player == computer:
         print("It is a draw!")
-    elif player == "rock":
-        if computer == "paper":
+    elif player == "rock" or 'piedra':
+        if computer == "paper" or 'papel':
             print("You lose!", computer, "covers", player+"!")
         else:
             print("You win!", player, "smashes", computer+'!')
-    elif player == "paper":
-        if computer == "scissors":
+    elif player == "paper" or 'papel':
+        if computer == "scissors" or 'tijera':
             print("You lose!", computer, "cuts", player+'!')
         else:
             print("You win!", player, "covers", computer+'!')
-    elif player == "scissors":
-        if computer == "rock":
+    elif player == "scissors" or 'tijera':
+        if computer == "rock" or 'piedra':
             print("You lose...", computer, "smashes", player+'!')
         else:
             print("You win!", player, "cuts", computer+"!")
